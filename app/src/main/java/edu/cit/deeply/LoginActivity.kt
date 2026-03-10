@@ -10,8 +10,8 @@ import android.widget.TextView
 import android.widget.Toast
 
 class LoginActivity : Activity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override fun onCreate(bundle: Bundle?) {
+        super.onCreate(bundle)
         setContentView(R.layout.activity_login)
 
         val edittextUsername = findViewById<EditText>(R.id.edittextUsername)

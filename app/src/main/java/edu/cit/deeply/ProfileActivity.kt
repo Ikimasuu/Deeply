@@ -8,8 +8,8 @@ import android.widget.ImageView
 import android.widget.TextView
 
 class ProfileActivity : Activity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override fun onCreate(bundle: Bundle?) {
+        super.onCreate(bundle)
         setContentView(R.layout.activity_profile)
 
         val username = intent.getStringExtra("USERNAME") ?: "Unknown"

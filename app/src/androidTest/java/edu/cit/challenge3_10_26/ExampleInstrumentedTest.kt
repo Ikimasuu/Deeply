@@ -1,4 +1,4 @@
-package edu.cit.deeply
+package edu.cit.challenge3_10_26
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

@@ -1,4 +1,4 @@
-package edu.cit.deeply
+package edu.cit.challenge3_10_26
 
 import android.app.Activity
 import android.content.Intent
@@ -18,7 +18,7 @@ class RegisterActivity : Activity() {
         val edittextPassword = findViewById<EditText>(R.id.edittextPassword)
         val edittextConfirmPassword = findViewById<EditText>(R.id.edittextConfirmPassword)
         val buttonRegister = findViewById<Button>(R.id.buttonRegister)
-        val textviewLoginNow = findViewById<TextView>(R.id.textviewLoginNow)
+        val textviewLogin = findViewById<TextView>(R.id.textviewLogin)
 
         buttonRegister.setOnClickListener {
             val username = edittextUsername.text.toString()
@@ -47,7 +47,7 @@ class RegisterActivity : Activity() {
             }
         }
 
-        textviewLoginNow.setOnClickListener {
+        textviewLogin.setOnClickListener {
             Log.e("Deeply", "Login now clicked")
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)

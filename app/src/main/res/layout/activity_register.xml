@@ -47,7 +47,7 @@
         android:layout_marginBottom="16dp" />
 
     <TextView
-        android:id="@+id/textviewLoginNow"
+        android:id="@+id/textviewLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Already have an account? Login now"

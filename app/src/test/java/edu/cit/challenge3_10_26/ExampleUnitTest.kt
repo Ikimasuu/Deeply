@@ -1,4 +1,4 @@
-package edu.cit.deeply
+package edu.cit.challenge3_10_26
 
 import org.junit.Test
 

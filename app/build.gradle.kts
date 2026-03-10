@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "edu.cit.deeply"
+    namespace = "edu.cit.challenge3_10_26"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "edu.cit.deeply"
+        applicationId = "edu.cit.challenge3_10_26"
         minSdk = 24
         targetSdk = 36
         versionCode = 1

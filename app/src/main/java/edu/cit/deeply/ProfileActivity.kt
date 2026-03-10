@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.ImageView
 import android.widget.TextView
 
 class ProfileActivity : Activity() {
@@ -11,22 +12,20 @@ class ProfileActivity : Activity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
 
+        val username = intent.getStringExtra("USERNAME") ?: "Unknown"
+
+        val imageviewPhoto = findViewById<ImageView>(R.id.imageviewPhoto)
+        val textviewUsernameLabel = findViewById<TextView>(R.id.textviewUsernameLabel)
         val textviewUsername = findViewById<TextView>(R.id.textviewUsername)
-        val textviewFirstName = findViewById<TextView>(R.id.textviewFirstName)
-        val textviewMiddleName = findViewById<TextView>(R.id.textviewMiddleName)
-        val textviewLastName = findViewById<TextView>(R.id.textviewLastName)
-        val textviewEmail = findViewById<TextView>(R.id.textviewEmail)
         val textviewBackToDashboard = findViewById<TextView>(R.id.textviewBackToDashboard)
 
-        textviewUsername.text = "Username: john_doe"
-        textviewFirstName.text = "First Name: John"
-        textviewMiddleName.text = "Middle Name: Michael"
-        textviewLastName.text = "Last Name: Doe"
-        textviewEmail.text = "Email: john.doe@email.com"
+        textviewUsernameLabel.text = "Username"
+        textviewUsername.text = username
 
         textviewBackToDashboard.setOnClickListener {
             Log.e("Deeply", "Back to Dashboard clicked")
             val intent = Intent(this, DashboardActivity::class.java)
+            intent.putExtra("USERNAME", username)
             startActivity(intent)
             finish()
         }

@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 
 class RegisterActivity : Activity() {
@@ -15,22 +16,23 @@ class RegisterActivity : Activity() {
 
         val edittextUsername = findViewById<EditText>(R.id.edittextUsername)
         val edittextPassword = findViewById<EditText>(R.id.edittextPassword)
-        val edittextReenterPassword = findViewById<EditText>(R.id.edittextReenterPassword)
-        val buttonSubmit = findViewById<Button>(R.id.buttonSubmit)
+        val edittextConfirmPassword = findViewById<EditText>(R.id.edittextConfirmPassword)
+        val buttonRegister = findViewById<Button>(R.id.buttonRegister)
+        val textviewLoginNow = findViewById<TextView>(R.id.textviewLoginNow)
 
-        buttonSubmit.setOnClickListener {
+        buttonRegister.setOnClickListener {
             val username = edittextUsername.text.toString()
             val password = edittextPassword.text.toString()
-            val reenterPassword = edittextReenterPassword.text.toString()
+            val confirmPassword = edittextConfirmPassword.text.toString()
 
-            if (username.isEmpty() || password.isEmpty() || reenterPassword.isEmpty()) {
+            if (username.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()) {
                 Toast.makeText(
                     this,
                     "All fields are required!",
                     Toast.LENGTH_SHORT
                 ).show()
                 Log.e("Deeply", "Register failed: empty fields")
-            } else if (password != reenterPassword) {
+            } else if (password != confirmPassword) {
                 Toast.makeText(
                     this,
                     "Passwords do not match!",
@@ -38,11 +40,18 @@ class RegisterActivity : Activity() {
                 ).show()
                 Log.e("Deeply", "Register failed: passwords do not match")
             } else {
-                Log.e("Deeply", "Submit button clicked")
+                Log.e("Deeply", "Register button clicked")
                 val intent = Intent(this, LoginActivity::class.java)
                 startActivity(intent)
                 finish()
             }
+        }
+
+        textviewLoginNow.setOnClickListener {
+            Log.e("Deeply", "Login now clicked")
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+            finish()
         }
     }
 }

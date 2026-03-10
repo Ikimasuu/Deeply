@@ -1,44 +1,48 @@
 package edu.cit.deeply
 
 import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
 class LoginActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         setContentView(R.layout.activity_login)
 
         val edittextUsername = findViewById<EditText>(R.id.edittextUsername)
         val edittextPassword = findViewById<EditText>(R.id.edittextPassword)
         val buttonLogin = findViewById<Button>(R.id.buttonLogin)
+        val textviewRegister = findViewById<TextView>(R.id.textviewRegister)
 
         buttonLogin.setOnClickListener {
-            Toast.makeText(
-                this,
-                "My message",
-                Toast.LENGTH_SHORT
-            ).show()
-            Log.e("Deeply", "Button Clicked!")
+            val username = edittextUsername.text.toString()
+            val password = edittextPassword.text.toString()
+
+            if (username.isEmpty() || password.isEmpty()) {
+                Toast.makeText(
+                    this,
+                    "Username or Password cannot be empty!",
+                    Toast.LENGTH_SHORT
+                ).show()
+                Log.e("Deeply", "Login failed: empty fields")
+            } else {
+                Log.e("Deeply", "Login button clicked")
+                val intent = Intent(this, DashboardActivity::class.java)
+                intent.putExtra("USERNAME", username)
+                intent.putExtra("PASSWORD", password)
+                startActivity(intent)
+            }
         }
 
-        val username = edittextUsername.toString()
-        val password = edittextPassword.toString()
-
-        if(username.isNullOrEmpty() || password.isNullOrEmpty()) {
-            Toast.makeText(
-                this,
-                "Username or Password cannot be empty!!",
-                Toast.LENGTH_SHORT
-            ).show()
+        textviewRegister.setOnClickListener {
+            Log.e("Deeply", "Register Now clicked")
+            val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
         }
     }
 }

@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 
@@ -12,15 +13,19 @@ class DashboardActivity : Activity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dashboard)
 
+        val username = intent.getStringExtra("USERNAME") ?: "User"
+
         val textviewWelcome = findViewById<TextView>(R.id.textviewWelcome)
+        val imageviewPhoto = findViewById<ImageView>(R.id.imageviewPhoto)
         val textviewProfile = findViewById<TextView>(R.id.textviewProfile)
         val textviewLogout = findViewById<TextView>(R.id.textviewLogout)
 
-        textviewWelcome.text = "Welcome to the Dashboard!"
+        textviewWelcome.text = "Welcome, $username!"
 
         textviewProfile.setOnClickListener {
             Log.e("Deeply", "Profile clicked")
             val intent = Intent(this, ProfileActivity::class.java)
+            intent.putExtra("USERNAME", username)
             startActivity(intent)
         }
 

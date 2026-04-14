@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <ViewFlipper
+        android:id="@+id/viewFlipper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Step 1: Environment -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/screen_padding"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/presession_env_title"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/presession_env_subtitle"
+                    android:textSize="16sp"
+                    android:textColor="@color/text_secondary"
+                    android:layout_marginBottom="32dp" />
+
+                <Button
+                    android:id="@+id/btnEnvHome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/env_home"
+                    android:layout_marginBottom="@dimen/button_spacing" />
+
+                <Button
+                    android:id="@+id/btnEnvCafe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/env_cafe"
+                    android:layout_marginBottom="@dimen/button_spacing" />
+
+                <Button
+                    android:id="@+id/btnEnvOffice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/env_office"
+                    android:layout_marginBottom="@dimen/button_spacing" />
+
+                <Button
+                    android:id="@+id/btnEnvLibrary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/env_library"
+                    android:layout_marginBottom="@dimen/button_spacing" />
+
+                <Button
+                    android:id="@+id/btnEnvOtherQuiet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/env_other_quiet"
+                    android:layout_marginBottom="@dimen/button_spacing" />
+
+                <Button
+                    android:id="@+id/btnEnvOtherNoisy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/env_other_noisy" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- Step 2: Activity -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/screen_padding"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/presession_activity_title"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/presession_activity_subtitle"
+                    android:textSize="16sp"
+                    android:textColor="@color/text_secondary"
+                    android:layout_marginBottom="32dp" />
+
+                <Button
+                    android:id="@+id/btnActReading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/activity_reading"
+                    android:layout_marginBottom="@dimen/button_spacing" />
+
+                <Button
+                    android:id="@+id/btnActWriting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/activity_writing"
+                    android:layout_marginBottom="@dimen/button_spacing" />
+
+                <Button
+                    android:id="@+id/btnActCoding"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/activity_coding"
+                    android:layout_marginBottom="@dimen/button_spacing" />
+
+                <Button
+                    android:id="@+id/btnActStudying"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/activity_studying"
+                    android:layout_marginBottom="@dimen/button_spacing" />
+
+                <Button
+                    android:id="@+id/btnActDesigning"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/activity_designing"
+                    android:layout_marginBottom="@dimen/button_spacing" />
+
+                <Button
+                    android:id="@+id/btnActOther"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/activity_other" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- Step 3: Energy -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/screen_padding"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/presession_energy_title"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/presession_energy_subtitle"
+                android:textSize="16sp"
+                android:textColor="@color/text_secondary"
+                android:layout_marginBottom="32dp" />
+
+            <Button
+                android:id="@+id/btnEnergyLow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/energy_low"
+                android:layout_marginBottom="@dimen/button_spacing" />
+
+            <Button
+                android:id="@+id/btnEnergyMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/energy_medium"
+                android:layout_marginBottom="@dimen/button_spacing" />
+
+            <Button
+                android:id="@+id/btnEnergyHigh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/energy_high" />
+
+        </LinearLayout>
+
+    </ViewFlipper>
+</FrameLayout>

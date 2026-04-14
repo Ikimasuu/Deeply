@@ -2,4 +2,36 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Brand -->
+    <color name="accent_orange">#E8622A</color>
+    <color name="background_warm">#FAF8F5</color>
+
+    <!-- Legacy aliases (referenced by existing layouts) -->
+    <color name="accent">@color/accent_orange</color>
+    <color name="background">@color/background_warm</color>
+
+    <!-- Greyscale ramp -->
+    <color name="grey_900">#1A1A1A</color>
+    <color name="grey_800">#333333</color>
+    <color name="grey_700">#4D4D4D</color>
+    <color name="grey_600">#666666</color>
+    <color name="grey_500">#808080</color>
+    <color name="grey_400">#999999</color>
+    <color name="grey_300">#B3B3B3</color>
+    <color name="grey_200">#CCCCCC</color>
+    <color name="grey_100">#E6E6E6</color>
+
+    <!-- Semantic text colors -->
+    <color name="text_primary">@color/grey_900</color>
+    <color name="text_secondary">@color/grey_600</color>
+    <color name="text_tertiary">@color/grey_400</color>
+
+    <!-- Semantic surface colors -->
+    <color name="surface">@color/white</color>
+    <color name="surface_elevated">@color/white</color>
+    <color name="divider">@color/grey_200</color>
+
+    <!-- Functional -->
+    <color name="destructive">#D14545</color>
 </resources>

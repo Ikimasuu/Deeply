@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Legacy (referenced by existing layouts) -->
+    <dimen name="screen_padding">24dp</dimen>
+    <dimen name="button_spacing">12dp</dimen>
+
+    <!-- Spacing scale -->
+    <dimen name="space_xs">4dp</dimen>
+    <dimen name="space_sm">8dp</dimen>
+    <dimen name="space_md">12dp</dimen>
+    <dimen name="space_lg">16dp</dimen>
+    <dimen name="space_xl">24dp</dimen>
+    <dimen name="space_2xl">32dp</dimen>
+    <dimen name="space_3xl">48dp</dimen>
+
+    <!-- Corner radii -->
+    <dimen name="radius_sm">8dp</dimen>
+    <dimen name="radius_md">12dp</dimen>
+    <dimen name="radius_lg">16dp</dimen>
+    <dimen name="radius_pill">999dp</dimen>
+
+    <!-- Component heights -->
+    <dimen name="height_button">56dp</dimen>
+    <dimen name="height_input">56dp</dimen>
+    <dimen name="height_row">64dp</dimen>
+
+    <!-- Specific component sizes -->
+    <dimen name="avatar_size">80dp</dimen>
+    <dimen name="icon_size">24dp</dimen>
+    <dimen name="logo_size">64dp</dimen>
+    <dimen name="metric_badge_size">28dp</dimen>
+</resources>

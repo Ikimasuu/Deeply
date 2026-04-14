@@ -1,9 +1,29 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.Deeply" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+    <style name="Theme.Deeply" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Brand colors -->
+        <item name="colorPrimary">@color/accent_orange</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/accent_orange</item>
+        <item name="colorOnPrimaryContainer">@color/white</item>
+
+        <!-- Surface -->
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorSurfaceVariant">@color/surface_elevated</item>
+
+        <!-- Background -->
+        <item name="android:windowBackground">@color/background_warm</item>
+        <item name="android:colorBackground">@color/background_warm</item>
+
+        <!-- Text -->
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+
+        <!-- Default text appearances -->
+        <item name="textAppearanceBodyLarge">@style/TextAppearance.Deeply.Body</item>
+        <item name="textAppearanceBodyMedium">@style/TextAppearance.Deeply.BodySmall</item>
+        <item name="textAppearanceBodySmall">@style/TextAppearance.Deeply.Caption</item>
+        <item name="textAppearanceLabelLarge">@style/TextAppearance.Deeply.Button</item>
     </style>
 
-    <style name="Theme.Deeply" parent="Base.Theme.Deeply" />
 </resources>

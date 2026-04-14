@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_surface_elevated"
+    android:padding="@dimen/space_md"
+    android:layout_marginBottom="@dimen/space_sm"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <!-- Collapsed content (always visible) -->
+
+    <TextView
+        android:id="@+id/tvActivityType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.Deeply.Heading2"
+        android:layout_marginBottom="@dimen/space_xs" />
+
+    <TextView
+        android:id="@+id/tvEnvironmentDuration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.Deeply.BodySmall"
+        android:layout_marginBottom="@dimen/space_xs" />
+
+    <TextView
+        android:id="@+id/tvStartTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.Deeply.Caption" />
+
+    <!-- Metric badges row (visible only when session has reflection scores) -->
+    <LinearLayout
+        android:id="@+id/layoutMetrics"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/space_sm"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvMetricFocus"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/metric_badge_size"
+            android:background="@drawable/bg_metric_badge"
+            android:textAppearance="@style/TextAppearance.Deeply.Caption"
+            android:textColor="@color/text_secondary"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/space_sm"
+            android:layout_marginEnd="@dimen/space_xs" />
+
+        <TextView
+            android:id="@+id/tvMetricDistraction"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/metric_badge_size"
+            android:background="@drawable/bg_metric_badge"
+            android:textAppearance="@style/TextAppearance.Deeply.Caption"
+            android:textColor="@color/text_secondary"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/space_sm"
+            android:layout_marginEnd="@dimen/space_xs" />
+
+        <TextView
+            android:id="@+id/tvMetricSatisfaction"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/metric_badge_size"
+            android:background="@drawable/bg_metric_badge"
+            android:textAppearance="@style/TextAppearance.Deeply.Caption"
+            android:textColor="@color/text_secondary"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/space_sm" />
+
+    </LinearLayout>
+
+    <!-- Expanded content (hidden by default) -->
+    <LinearLayout
+        android:id="@+id/layoutExpanded"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/space_md">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider"
+            android:layout_marginBottom="@dimen/space_md" />
+
+        <TextView
+            android:id="@+id/tvEnergyLevel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.Deeply.BodySmall"
+            android:layout_marginBottom="@dimen/space_xs" />
+
+        <TextView
+            android:id="@+id/tvFullStartTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.Deeply.BodySmall"
+            android:layout_marginBottom="@dimen/space_xs" />
+
+        <TextView
+            android:id="@+id/tvFullEndTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.Deeply.BodySmall"
+            android:layout_marginBottom="@dimen/space_xs" />
+
+        <!-- Detailed reflection scores -->
+        <LinearLayout
+            android:id="@+id/layoutExpandedScores"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/space_sm">
+
+            <TextView
+                android:id="@+id/tvDetailFocus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.Deeply.BodySmall"
+                android:layout_marginBottom="@dimen/space_xs" />
+
+            <TextView
+                android:id="@+id/tvDetailDistraction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.Deeply.BodySmall"
+                android:layout_marginBottom="@dimen/space_xs" />
+
+            <TextView
+                android:id="@+id/tvDetailSatisfaction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.Deeply.BodySmall" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -12,15 +12,29 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Deeply"
         tools:targetApi="31">
+
+        <!-- Launcher: Login -->
         <activity
-            android:name=".LoginActivity"
+            android:name=".screens.login.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Dashboard hub -->
+        <activity android:name=".screens.dashboard.DashboardActivity" />
+
+        <!-- Session loop -->
+        <activity android:name=".screens.presession.PreSessionActivity" />
+        <activity android:name=".screens.activesession.ActiveSessionActivity" />
+        <activity android:name=".screens.postsession.PostSessionActivity" />
+
+        <!-- Other screens -->
+        <activity android:name=".screens.profile.ProfileActivity" />
+        <activity android:name=".screens.history.HistoryActivity" />
+
     </application>
 
 </manifest>

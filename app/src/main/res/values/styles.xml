@@ -85,6 +85,20 @@
         <item name="rippleColor">@color/grey_100</item>
     </style>
 
+    <!-- Accent-colored heading for the two-tone title pattern -->
+    <style name="TextAppearance.Deeply.HeadingAccent" parent="TextAppearance.Deeply.Heading1">
+        <item name="android:textColor">@color/accent_orange</item>
+    </style>
+
+    <!-- Option card style for PreSession grid/list items -->
+    <style name="Widget.Deeply.OptionCard">
+        <item name="android:background">@drawable/bg_surface_elevated</item>
+        <item name="android:padding">@dimen/space_lg</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+    </style>
+
     <style name="Widget.Deeply.TextInputLayout" parent="Widget.Material3.TextInputLayout.OutlinedBox">
         <item name="boxCornerRadiusTopStart">@dimen/radius_md</item>
         <item name="boxCornerRadiusTopEnd">@dimen/radius_md</item>

@@ -2,50 +2,68 @@
     <string name="app_name">Deeply</string>
 
     <!-- PreSession: Environment -->
-    <string name="presession_env_title">Where are you?</string>
-    <string name="presession_env_subtitle">Choose your environment</string>
+    <string name="presession_env_title">Where are you working?</string>
+    <string name="presession_env_subtitle">Your surroundings shape your focus.</string>
     <string name="env_home">Home</string>
     <string name="env_cafe">Cafe</string>
     <string name="env_office">Office</string>
     <string name="env_library">Library</string>
-    <string name="env_other_quiet">Other (Quiet)</string>
-    <string name="env_other_noisy">Other (Noisy)</string>
+    <string name="env_other_quiet">Other quiet</string>
+    <string name="env_other_noisy">Other noisy</string>
 
     <!-- PreSession: Activity -->
-    <string name="presession_activity_title">What will you do?</string>
-    <string name="presession_activity_subtitle">Pick your activity</string>
-    <string name="activity_reading">Reading</string>
+    <string name="presession_activity_title">What will you work on?</string>
+    <string name="presession_activity_subtitle">One activity. One intention.</string>
+    <string name="activity_reading">Reading &amp; Research</string>
     <string name="activity_writing">Writing</string>
     <string name="activity_coding">Coding</string>
-    <string name="activity_studying">Studying</string>
+    <string name="activity_studying">Problem Solving</string>
     <string name="activity_designing">Designing</string>
-    <string name="activity_other">Other</string>
+    <string name="activity_other">Planning &amp; Organizing</string>
 
     <!-- PreSession: Energy -->
-    <string name="presession_energy_title">Energy level?</string>
-    <string name="presession_energy_subtitle">How are you feeling right now?</string>
+    <string name="presession_energy_title">How\'s your energy right now?</string>
+    <string name="presession_energy_subtitle">Be honest — this is just for you.</string>
     <string name="energy_low">Low</string>
     <string name="energy_medium">Medium</string>
     <string name="energy_high">High</string>
+    <string name="energy_low_desc">Tired or sluggish</string>
+    <string name="energy_medium_desc">Present but not sharp</string>
+    <string name="energy_high_desc">Sharp and ready</string>
+
+    <!-- PreSession: Navigation -->
+    <string name="presession_step_format">Step %1$d of 3</string>
+    <string name="presession_continue">Continue →</string>
+    <string name="presession_back">← Back</string>
+    <string name="presession_begin">Begin Session →</string>
 
     <!-- ActiveSession -->
-    <string name="active_session_title">Focus Session</string>
+    <string name="active_session_title">In focus</string>
     <string name="active_session_initial_time">00:00</string>
-    <string name="active_session_end">End Session</string>
+    <string name="active_session_end">End session</string>
+    <string name="active_session_subtitle">Stay with it. You\'re doing well.</string>
 
     <!-- PostSession -->
-    <string name="post_session_title">Session Complete</string>
-    <string name="post_session_focus_quality">Focus Quality</string>
-    <string name="post_session_distraction">Distraction Level</string>
-    <string name="post_session_satisfaction">Satisfaction</string>
-    <string name="post_session_save">Save Reflection</string>
+    <string name="post_session_title">How did that session feel?</string>
+    <string name="post_session_subtitle">Your honest reflection builds better patterns over time.</string>
+    <string name="post_session_focus_quality">Focus depth</string>
+    <string name="post_session_distraction">Fatigue after</string>
+    <string name="post_session_satisfaction">Task completion</string>
+    <string name="post_session_save">Save session →</string>
+    <string name="post_session_skip">Skip reflection</string>
     <string name="post_session_summary_format">%1$s · %2$s · %3$s</string>
+    <string name="focus_label_low">Scattered</string>
+    <string name="focus_label_high">Locked in</string>
+    <string name="fatigue_label_low">Energised</string>
+    <string name="fatigue_label_high">Drained</string>
+    <string name="completion_label_low">Barely started</string>
+    <string name="completion_label_high">Nailed it</string>
 
     <!-- Dashboard -->
-    <string name="dashboard_greeting">Welcome back</string>
-    <string name="dashboard_subtitle">Ready to focus?</string>
+    <string name="dashboard_greeting">Good morning,</string>
+    <string name="dashboard_subtitle">Ready to go deeper?</string>
     <string name="dashboard_start_title">Start a session</string>
-    <string name="dashboard_start_body">Set your environment, activity, and energy level.</string>
+    <string name="dashboard_start_body">Takes less than 20 seconds to set up →</string>
     <string name="dashboard_start_button">Begin</string>
     <string name="dashboard_history_body">View your past focus sessions</string>
 
@@ -76,7 +94,8 @@
     <string name="profile_version_number">1.0.0</string>
 
     <!-- History -->
-    <string name="history_title">History</string>
+    <string name="history_title">Session history.</string>
+    <string name="history_subtitle_format">%1$d sessions recorded.</string>
     <string name="history_empty_title">No sessions yet</string>
     <string name="history_empty_body">Complete your first focus session to see it here.</string>
     <string name="history_focus">Focus</string>

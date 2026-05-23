@@ -44,12 +44,12 @@ class PreSessionActivity : AppCompatActivity(), PreSessionContract.View {
     }
 
     private fun setupActivityButtons() {
-        binding.btnActReading.setOnClickListener { presenter.onActivitySelected(Activity.READING) }
+        binding.btnActReading.setOnClickListener { presenter.onActivitySelected(Activity.READING_RESEARCH) }
         binding.btnActWriting.setOnClickListener { presenter.onActivitySelected(Activity.WRITING) }
         binding.btnActCoding.setOnClickListener { presenter.onActivitySelected(Activity.CODING) }
-        binding.btnActStudying.setOnClickListener { presenter.onActivitySelected(Activity.STUDYING) }
+        binding.btnActStudying.setOnClickListener { presenter.onActivitySelected(Activity.PROBLEM_SOLVING) }
         binding.btnActDesigning.setOnClickListener { presenter.onActivitySelected(Activity.DESIGNING) }
-        binding.btnActOther.setOnClickListener { presenter.onActivitySelected(Activity.OTHER) }
+        binding.btnActOther.setOnClickListener { presenter.onActivitySelected(Activity.PLANNING_ORGANIZING) }
     }
 
     private fun setupEnergyButtons() {

@@ -47,6 +47,12 @@ class ActiveSessionActivity : AppCompatActivity(), ActiveSessionContract.View {
         binding.tvElapsedTime.text = formatted
     }
 
+    override fun displaySessionTags(activity: String, environment: String, energy: String) {
+        binding.tvTagActivity.text = activity
+        binding.tvTagEnvironment.text = environment
+        binding.tvTagEnergy.text = energy
+    }
+
     override fun navigateToPostSession(sessionId: String) {
         val intent = Intent(this, PostSessionActivity::class.java)
         intent.putExtra(PostSessionActivity.EXTRA_SESSION_ID, sessionId)

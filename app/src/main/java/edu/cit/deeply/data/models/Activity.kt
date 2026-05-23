@@ -1,10 +1,10 @@
 package edu.cit.deeply.data.models
 
 enum class Activity {
-    READING,
     WRITING,
+    READING_RESEARCH,
     CODING,
-    STUDYING,
     DESIGNING,
-    OTHER
+    PROBLEM_SOLVING,
+    PLANNING_ORGANIZING
 }

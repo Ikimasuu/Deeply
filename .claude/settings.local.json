@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find /d/Documents/dev/active/Deeply -name \"R.java\" -o -name \"*.gradle\" 2>/dev/null | head -20)",
+      "Bash(cd \"D:/Documents/dev/active/Deeply\" && ./gradlew assembleDebug 2>&1 | tail -30)",
+      "Bash(cd \"D:/Documents/dev/active/Deeply\" && ./gradlew assembleDebug 2>&1 | tail -15)",
+      "Bash(grep -E \"\\\\.\\(java|kotlin|xml|gradle|kts|md\\)$\")",
+      "Bash(./gradlew assembleDebug)",
+      "Bash(adb devices:*)",
+      "Bash(adb kill-server:*)",
+      "Bash(adb start-server:*)",
+      "Bash(taskkill //F //IM \"qemu-system-x86_64.exe\")",
+      "Bash(adb logcat:*)",
+      "Bash(claude mcp:*)"
+    ]
+  }
+}

@@ -35,7 +35,17 @@ class ActiveSessionPresenter : ActiveSessionContract.Presenter {
             return
         }
         startTime = session.startTime
+        view?.displaySessionTags(
+            formatEnumName(session.activity.name),
+            formatEnumName(session.environment.name),
+            formatEnumName(session.energy.name)
+        )
         startTimer(sessionId)
+    }
+
+    private fun formatEnumName(name: String): String {
+        return name.replace("_", " ").lowercase()
+            .replaceFirstChar { it.uppercase() }
     }
 
     override fun onEndSessionClicked() {

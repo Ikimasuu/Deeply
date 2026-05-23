@@ -4,32 +4,82 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:padding="@dimen/screen_padding"
-    android:background="@color/background">
+    android:padding="@dimen/space_xl"
+    android:background="@color/background_warm">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/active_session_title"
-        android:textSize="20sp"
-        android:textColor="@color/text_secondary"
-        android:layout_marginBottom="16dp" />
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/active_session_title"
+            android:textAppearance="@style/TextAppearance.Deeply.Caption" />
+
+        <TextView
+            android:id="@+id/btnEndSession"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/active_session_end"
+            android:textAppearance="@style/TextAppearance.Deeply.Caption"
+            android:textColor="@color/accent_orange"
+            android:clickable="true"
+            android:focusable="true" />
+    </LinearLayout>
 
     <TextView
         android:id="@+id/tvElapsedTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_3xl"
         android:text="@string/active_session_initial_time"
-        android:textSize="64sp"
-        android:textStyle="bold"
-        android:textColor="@color/text_primary"
-        android:layout_marginBottom="48dp" />
+        android:textAppearance="@style/TextAppearance.Deeply.Display"
+        android:textSize="56sp"
+        android:textColor="@color/text_primary" />
 
-    <Button
-        android:id="@+id/btnEndSession"
-        android:layout_width="match_parent"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/active_session_end"
-        android:backgroundTint="@color/accent" />
+        android:layout_marginTop="@dimen/space_lg"
+        android:text="@string/active_session_subtitle"
+        android:textAppearance="@style/TextAppearance.Deeply.BodySmall"
+        android:gravity="center" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/space_3xl">
+
+        <TextView
+            android:id="@+id/tvTagActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_metric_badge"
+            android:padding="@dimen/space_sm"
+            android:textAppearance="@style/TextAppearance.Deeply.Caption" />
+
+        <TextView
+            android:id="@+id/tvTagEnvironment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_sm"
+            android:background="@drawable/bg_metric_badge"
+            android:padding="@dimen/space_sm"
+            android:textAppearance="@style/TextAppearance.Deeply.Caption" />
+
+        <TextView
+            android:id="@+id/tvTagEnergy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_sm"
+            android:background="@drawable/bg_metric_badge"
+            android:padding="@dimen/space_sm"
+            android:textAppearance="@style/TextAppearance.Deeply.Caption" />
+    </LinearLayout>
 
 </LinearLayout>

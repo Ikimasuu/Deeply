@@ -52,6 +52,7 @@
     <string name="post_session_save">Save session →</string>
     <string name="post_session_skip">Skip reflection</string>
     <string name="post_session_summary_format">%1$s · %2$s · %3$s</string>
+    <string name="post_session_context_format">%1$s · %2$s</string>
     <string name="focus_label_low">Scattered</string>
     <string name="focus_label_high">Locked in</string>
     <string name="fatigue_label_low">Energised</string>

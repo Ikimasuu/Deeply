@@ -28,6 +28,10 @@ class PostSessionActivity : AppCompatActivity(), PostSessionContract.View {
                 satisfaction = binding.seekSatisfaction.progress
             )
         }
+
+        binding.btnSkip.setOnClickListener {
+            presenter.onSkipClicked()
+        }
     }
 
     override fun onStart() {
@@ -48,8 +52,11 @@ class PostSessionActivity : AppCompatActivity(), PostSessionContract.View {
     }
 
     override fun displaySessionSummary(environment: String, activity: String, duration: String) {
-        binding.tvSessionSummary.text =
-            getString(edu.cit.deeply.R.string.post_session_summary_format, environment, activity, duration)
+        binding.tvSessionContext.text = getString(
+            edu.cit.deeply.R.string.post_session_context_format,
+            activity,
+            duration
+        )
     }
 
     override fun navigateToFinish() {

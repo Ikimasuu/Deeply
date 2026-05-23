@@ -24,10 +24,8 @@ class PostSessionPresenter : PostSessionContract.Presenter {
         }
 
         val durationMs = (session.endTime ?: System.currentTimeMillis()) - session.startTime
-        val totalSeconds = durationMs / 1000
-        val minutes = totalSeconds / 60
-        val seconds = totalSeconds % 60
-        val duration = String.format("%02d:%02d", minutes, seconds)
+        val totalMinutes = (durationMs / 1000 / 60).coerceAtLeast(1)
+        val duration = "$totalMinutes min"
 
         view?.displaySessionSummary(
             environment = session.environment.name,
@@ -42,6 +40,19 @@ class PostSessionPresenter : PostSessionContract.Presenter {
             session.focusQuality = focusQuality
             session.distractionLevel = distractionLevel
             session.satisfaction = satisfaction
+        }
+        view?.navigateToFinish()
+    }
+
+    override fun onSkipClicked() {
+        val id = sessionId ?: run {
+            view?.navigateToFinish()
+            return
+        }
+        SessionRepository.updateSession(id) { session ->
+            session.focusQuality = 5
+            session.distractionLevel = 5
+            session.satisfaction = 5
         }
         view?.navigateToFinish()
     }

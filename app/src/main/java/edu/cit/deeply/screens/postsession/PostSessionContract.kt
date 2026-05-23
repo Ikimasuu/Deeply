@@ -13,5 +13,6 @@ interface PostSessionContract {
         fun detachView()
         fun onSessionLoaded(sessionId: String)
         fun onSaveReflection(focusQuality: Int, distractionLevel: Int, satisfaction: Int)
+        fun onSkipClicked()
     }
 }

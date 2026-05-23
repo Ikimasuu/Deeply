@@ -8,25 +8,45 @@ import edu.cit.deeply.screens.history.HistoryActivity
 import edu.cit.deeply.screens.presession.PreSessionActivity
 import edu.cit.deeply.screens.profile.ProfileActivity
 
-class DashboardActivity : AppCompatActivity() {
+class DashboardActivity : AppCompatActivity(), DashboardContract.View {
 
     private lateinit var binding: ActivityDashboardBinding
+    private val presenter: DashboardContract.Presenter = DashboardPresenter()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityDashboardBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.btnStartSession.setOnClickListener {
-            startActivity(Intent(this, PreSessionActivity::class.java))
-        }
+        binding.btnStartSession.setOnClickListener { presenter.onStartSessionClicked() }
+        binding.cardHistory.setOnClickListener { presenter.onHistoryClicked() }
+        binding.btnProfile.setOnClickListener { presenter.onProfileClicked() }
+    }
 
-        binding.cardHistory.setOnClickListener {
-            startActivity(Intent(this, HistoryActivity::class.java))
-        }
+    override fun onStart() {
+        super.onStart()
+        presenter.attachView(this)
+        presenter.onScreenOpened()
+    }
 
-        binding.btnProfile.setOnClickListener {
-            startActivity(Intent(this, ProfileActivity::class.java))
-        }
+    override fun onStop() {
+        presenter.detachView()
+        super.onStop()
+    }
+
+    override fun displayGreeting(name: String) {
+        binding.tvGreeting.text = "Good morning,"
+    }
+
+    override fun navigateToPreSession() {
+        startActivity(Intent(this, PreSessionActivity::class.java))
+    }
+
+    override fun navigateToHistory() {
+        startActivity(Intent(this, HistoryActivity::class.java))
+    }
+
+    override fun navigateToProfile() {
+        startActivity(Intent(this, ProfileActivity::class.java))
     }
 }

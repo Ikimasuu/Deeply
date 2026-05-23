@@ -65,17 +65,17 @@ class ProfileActivity : AppCompatActivity(), ProfileContract.View {
         ProfileRow.SectionHeader(getString(R.string.profile_section_account)),
         ProfileRow.Navigation(
             id = "edit_profile",
-            iconRes = android.R.drawable.ic_menu_edit,
+            iconRes = R.drawable.ic_person,
             title = getString(R.string.profile_edit_profile)
         ),
         ProfileRow.Navigation(
             id = "change_password",
-            iconRes = android.R.drawable.ic_lock_idle_lock,
+            iconRes = R.drawable.ic_lock,
             title = getString(R.string.profile_change_password)
         ),
         ProfileRow.Navigation(
             id = "sign_out",
-            iconRes = android.R.drawable.ic_menu_revert,
+            iconRes = R.drawable.ic_logout,
             title = getString(R.string.profile_sign_out),
             showChevron = false,
             textColorRes = R.color.destructive
@@ -85,19 +85,19 @@ class ProfileActivity : AppCompatActivity(), ProfileContract.View {
         ProfileRow.SectionHeader(getString(R.string.profile_section_preferences)),
         ProfileRow.Toggle(
             id = "notifications",
-            iconRes = android.R.drawable.ic_popup_reminder,
+            iconRes = R.drawable.ic_notifications,
             title = getString(R.string.profile_notifications),
             isChecked = true
         ),
         ProfileRow.Toggle(
             id = "haptic_feedback",
-            iconRes = android.R.drawable.ic_menu_compass,
+            iconRes = R.drawable.ic_vibration,
             title = getString(R.string.profile_haptic_feedback),
             isChecked = true
         ),
         ProfileRow.Navigation(
             id = "theme",
-            iconRes = android.R.drawable.ic_menu_gallery,
+            iconRes = R.drawable.ic_palette,
             title = getString(R.string.profile_theme),
             subtitle = getString(R.string.profile_theme_system)
         ),
@@ -106,17 +106,17 @@ class ProfileActivity : AppCompatActivity(), ProfileContract.View {
         ProfileRow.SectionHeader(getString(R.string.profile_section_about)),
         ProfileRow.Navigation(
             id = "privacy_policy",
-            iconRes = android.R.drawable.ic_menu_info_details,
+            iconRes = R.drawable.ic_privacy,
             title = getString(R.string.profile_privacy_policy)
         ),
         ProfileRow.Navigation(
             id = "terms_of_service",
-            iconRes = android.R.drawable.ic_menu_info_details,
+            iconRes = R.drawable.ic_description,
             title = getString(R.string.profile_terms_of_service)
         ),
         ProfileRow.Navigation(
             id = "version",
-            iconRes = android.R.drawable.ic_menu_help,
+            iconRes = R.drawable.ic_info,
             title = getString(R.string.profile_version),
             subtitle = getString(R.string.profile_version_number),
             showChevron = false
